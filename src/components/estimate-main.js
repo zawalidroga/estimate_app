@@ -1,5 +1,5 @@
 import React from 'react';
-import NewEstimate from './addNewEstimate';
+import NewEstimate from './addingNewEst/addNewEstimate';
 import EstimateDetailed from './estimate-detailed';
 
 class Estimate extends React.Component {
@@ -10,9 +10,9 @@ class Estimate extends React.Component {
     
     }
 
-    addChild = () => {
+    addChild = (title) => {
 
-        this.state.estimates.push(<EstimateDetailed title = {this.state.titleTest} key = {this.state.numEstimate} />)        
+        this.state.estimates.push(<EstimateDetailed title = {title} key = {this.state.numEstimate} />)        
         
         this.setState( (state) => ({
             numEstimate: (state.numEstimate + 1)
