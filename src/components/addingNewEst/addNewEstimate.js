@@ -1,27 +1,16 @@
-import React, { useState } from 'react';
-import AddEstTitle from './addEstTitle'
+import React from 'react';
+import { Wrapper } from '../styled/newButton.styled'
 
 const NewEstimate = (props) => {
-    
-    const [estTitle, setEstTitle] = useState();
-
-    const letsAddNewEstimate = (inputValue) => {
-             props.addNew(inputValue);
-             setEstTitle(estTitle => null)
-         
-    }
-
-    const appendEstimateInput = () => {
-            setEstTitle(estTitle => <AddEstTitle letsAdd = {letsAddNewEstimate}/>)
-        
-    }
+   
 
     return(
-        <div>
-            <button onClick = {appendEstimateInput}> + </button>
-            {estTitle}
-        </div>
+        <Wrapper>
+            <button onClick = {props.addNew} className = ""> + </button>
+            
+        </Wrapper>
     )
 }
 
 export default NewEstimate; 
+

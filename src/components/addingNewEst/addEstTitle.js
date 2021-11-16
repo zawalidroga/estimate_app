@@ -9,6 +9,7 @@ const AddEstTitle = (props) => {
 
     const keyDownHandler = (e) => {
         if (e.key === 'Enter') {
+            console.log(inputValue)
             props.letsAdd(inputValue)
         }
     }
